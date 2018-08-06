@@ -1,0 +1,1 @@
+<script src="{{url('plugins/select2/js/select2.full.js')}}"></script>
