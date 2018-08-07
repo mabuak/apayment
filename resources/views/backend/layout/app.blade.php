@@ -112,6 +112,7 @@
                     </a>
                 </li>
 
+                @include('backend.menu.paymentItem')
                 @include('backend.menu.auth')
             </ul>
             <!-- End: Sidebar Menu -->

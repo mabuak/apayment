@@ -6,6 +6,7 @@
             placeholder: "Select",
             containerCssClass: ':all:',
             width: '100%',
+            allowClear: true
         });
     });
 </script>
