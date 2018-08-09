@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     PaymentItemController.php
- * @LastModified 8/7/18 11:49 AM.
+ * @LastModified 8/7/18 4:14 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -131,7 +131,7 @@ class PaymentItemController extends Controller
             $select = [
                 'payment_items.id',
                 'name',
-                'amount',
+                'price',
                 'currency',
                 'payment_items.created_at',
                 'payment_items.updated_at',

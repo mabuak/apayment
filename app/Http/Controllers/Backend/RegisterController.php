@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     RegisterController.php
- * @LastModified 7/24/18 4:17 PM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -43,6 +43,7 @@ class RegisterController extends Controller
     public function actionRegistration(RegisterRequest $request, AuthContract $authContract)
     {
         try {
+            $request->offsetSet('token', md5(now()));
 
             $authContract->register($request);
             session()->flash('success', __('auth.activation_email_successful'));

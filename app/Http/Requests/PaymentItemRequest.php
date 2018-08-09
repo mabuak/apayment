@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     PaymentItemRequest.php
- * @LastModified 8/7/18 10:50 AM.
+ * @LastModified 8/7/18 4:12 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -35,7 +35,7 @@ class PaymentItemRequest extends FormRequest
 
         return [
             'name'     => 'required',
-            'amount'   => 'required',
+            'price'    => 'required',
             'currency' => 'required',
         ];
     }

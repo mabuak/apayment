@@ -22,13 +22,13 @@
 
                         <div class="col-md-4">
 
-                            <div class="form-group @if($errors->has('amount')) has-error @endif">
+                            <div class="form-group @if($errors->has('price')) has-error @endif">
 
-                                <label for="amount" class="control-label">@lang('paymentItem.form_amount') <span style="color: red">*</span></label>
+                                <label for="price" class="control-label">@lang('paymentItem.form_price') <span style="color: red">*</span></label>
 
-                                <input type="text" class="form-control input-sm amount text-right" id="amount" name="amount" value="{{str_replace(',', '', old('amount'))}}">
+                                <input type="text" class="form-control input-sm price text-right" id="price" name="price" value="{{str_replace(',', '', old('price'))}}">
 
-                                {!! $errors->first('amount', '<em for="amount" class="text-danger">:message</em>') !!}
+                                {!! $errors->first('price', '<em for="price" class="text-danger">:message</em>') !!}
                             </div>
                         </div>
 
@@ -48,7 +48,7 @@
     <script src="{{url('plugins/autonumeric/autoNumeric.js')}}"></script>
     <script>
         function loadCurrency() {
-            $("#amount").autoNumeric('init', {aPad: false, aSep: ','});
+            $("#price").autoNumeric('init', {aPad: false, aSep: ','});
         }
 
         $(document).ready(function () {

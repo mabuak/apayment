@@ -2,8 +2,8 @@
 /**
  * Created By DhanPris
  *
- * @Filename     UserServiceContract.php
- * @LastModified 7/24/18 10:47 AM.
+ * @Filename     UserContract.php
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -20,5 +20,7 @@ interface UserContract
     public function update($user, $request);
 
     public function delete($id);
+
+    public function getOneByToken($token);
 
 }

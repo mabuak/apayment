@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     paymentItem.php
- * @LastModified 8/7/18 10:26 AM.
+ * @LastModified 8/7/18 4:10 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -17,7 +17,7 @@ return [
     'title_detail' => 'Detail Payment Item',
 
     'form_name'     => 'Name',
-    'form_amount'   => 'Amount',
+    'form_price'    => 'Price',
     'form_currency' => 'Currency',
     'form_agent'    => 'Agent',
 ];

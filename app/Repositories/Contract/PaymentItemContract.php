@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     PaymentItemContract.php
- * @LastModified 8/7/18 11:46 AM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -25,4 +25,6 @@ interface PaymentItemContract
     public function save($model);
 
     public function delete($id);
+
+    public function getManyWhereWithoutScope($column, $value);
 }

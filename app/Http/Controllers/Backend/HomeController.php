@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     HomeController.php
- * @LastModified 7/11/18 3:44 PM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -14,7 +14,6 @@ use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
-
     /**
      * Show the application dashboard.
      *

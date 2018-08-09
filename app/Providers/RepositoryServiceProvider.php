@@ -3,15 +3,15 @@
  * Created By DhanPris
  *
  * @Filename     RepositoryServiceProvider.php
- * @LastModified 8/6/18 4:54 PM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
 
 namespace App\Providers;
 
-use App\Repositories\Contract\{PaymentItemContract, RoleContract, UserContract};
-use App\Repositories\{PaymentItemRepository, RoleRepository, UserRepository};
+use App\Repositories\Contract\{InvoiceContract, InvoiceItemContract, PaymentItemContract, RoleContract, UserContract};
+use App\Repositories\{InvoiceItemRepository, InvoiceRepository, PaymentItemRepository, RoleRepository, UserRepository};
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -46,6 +46,16 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             PaymentItemContract::class,
             PaymentItemRepository::class
+        );
+
+        $this->app->bind(
+            InvoiceContract::class,
+            InvoiceRepository::class
+        );
+
+        $this->app->bind(
+            InvoiceItemContract::class,
+            InvoiceItemRepository::class
         );
     }
 }

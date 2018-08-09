@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     PaymentItem.php
- * @LastModified 8/7/18 11:54 AM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -17,7 +17,7 @@ class PaymentItem extends Model
 {
     protected $fillable = [
             'name',
-            'amount',
+            'price',
             'currency',
             'user_id',
         ];
@@ -47,8 +47,8 @@ class PaymentItem extends Model
      *
      * @return float
      */
-    public function setAmountAttribute($value)
+    public function setPriceAttribute($value)
     {
-        return $this->attributes['amount'] = (float)str_replace(',', '', $value);
+        return $this->attributes['price'] = (float)str_replace(',', '', $value);
     }
 }

@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     PaymentItemService.php
- * @LastModified 8/7/18 11:48 AM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -132,5 +132,15 @@ class PaymentItemService implements PaymentItemContract
     {
         return $this->paymentItemRepository->get($id);
     }
+
+    /**
+     * @param int $userId
+     *
+     * @return mixed
+     */
+    public function getUserPaymentItem(int $userId){
+        return $this->paymentItemRepository->getManyWhereWithoutScope('user_id', $userId);
+    }
+
 }
 

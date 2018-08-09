@@ -138,7 +138,7 @@
     <footer id="content-footer">
         <div class="row">
             <div class="col-md-6">
-                <span class="footer-legal"> <b>Version</b> 1.0.0 <b>Build</b> 0</span> ||
+                <span class="footer-legal"> <b>Version</b> 1.0.0Beta <b>Build</b> 2</span> ||
                 <a href="mailto:support@carrymobile.com">Contact Support</a>
             </div>
             <div class="col-md-6 text-right">

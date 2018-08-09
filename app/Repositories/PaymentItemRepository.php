@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     PaymentItemRepository.php
- * @LastModified 8/6/18 4:55 PM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -12,6 +12,7 @@ namespace App\Repositories;
 
 use App\Models\PaymentItem;
 use App\Repositories\Contract\PaymentItemContract;
+use App\Scopes\GrantScope;
 
 class PaymentItemRepository extends BaseRepository implements PaymentItemContract
 {
@@ -30,5 +31,16 @@ class PaymentItemRepository extends BaseRepository implements PaymentItemContrac
     public function __construct(PaymentItem $model)
     {
         $this->model = $model;
+    }
+
+    /**
+     * @param $column
+     * @param $value
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function getManyWhereWithoutScope($column, $value)
+    {
+        return $this->model->newQueryWithoutScope(new GrantScope())->where($column, $value)->get();
     }
 }

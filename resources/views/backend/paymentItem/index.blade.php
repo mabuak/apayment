@@ -47,7 +47,7 @@
             columns: [
                 {data: 'id', name: 'id', visible: false},
                 {data: 'name', name: 'name', title: '@lang('paymentItem.form_name')'},
-                {data: 'amount', name: 'amount', title: '@lang('paymentItem.form_amount')', class: 'text-right'},
+                {data: 'price', name: 'price', title: '@lang('paymentItem.form_price')', class: 'text-right'},
                 {data: 'currency', name: 'currency', title: '@lang('paymentItem.form_currency')'},
                 {data: 'user.email', name: 'user.email', defaultContent: '', title: '@lang('paymentItem.form_agent')'},
                 {data: 'created_at', name: 'created_at', title: '@lang('auth.index_created_at')', visible: false},

@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     BaseRepository.php
- * @LastModified 8/7/18 11:36 AM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -25,6 +25,14 @@ abstract Class BaseRepository implements BaseContract
     public function getModel()
     {
         return $this->model;
+    }
+
+    /**
+     * @param mixed $model
+     */
+    public function setModel($model)
+    {
+        $this->model = $model;
     }
 
     /**
@@ -118,7 +126,9 @@ abstract Class BaseRepository implements BaseContract
      */
     public function save($model)
     {
-        return $model->save();
+        $model->save();
+
+        return $model;
     }
 
     /**

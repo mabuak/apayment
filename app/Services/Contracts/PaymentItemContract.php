@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     PaymentItemContract.php
- * @LastModified 8/7/18 11:16 AM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -23,4 +23,5 @@ interface PaymentItemContract
 
     public function delete($id);
 
+    public function getUserPaymentItem(int $userId);
 }
