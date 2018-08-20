@@ -29,19 +29,21 @@
                                 <thead>
                                 <tr>
                                     <td><strong>Item</strong></td>
-                                    <td><strong>Total</strong></td>
+                                    <td colspan="2" class="text-center"><strong>Total</strong></td>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($paymentItems as $paymentItem)
                                     <tr>
                                         <td>{{$paymentItem->name}}</td>
-                                        <td class="text-right">{{$paymentItem->currency . ' ' . number_format($paymentItem->price)}}</td>
+                                        <td class="text-right">{{$paymentItem->currency}}</td>
+                                        <td class="text-right">{{number_format($paymentItem->price)}}</td>
                                     </tr>
                                 @endforeach
                                 <tr>
                                     <td><strong>Grand Total</strong></td>
-                                    <td class="text-right"><strong>{{$paymentItem->currency . ' ' . number_format($paymentItems->sum('price'))}}</strong></td>
+                                    <td class="text-right">{{$paymentItem->currency}}</td>
+                                    <td class="text-right"><strong>{{number_format($paymentItems->sum('price'))}}</strong></td>
                                 </tr>
                                 </tbody>
                             </table>

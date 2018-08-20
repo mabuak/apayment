@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     CheckoutController.php
- * @LastModified 8/9/18 10:19 AM.
+ * @LastModified 8/16/18 2:49 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -42,13 +42,13 @@ class CheckoutController extends Controller
     public function create(Request $request, UserContract $userContract, PaymentItemContract $paymentItemContract)
     {
         if ($request->userToken == null) {
-            abort('404');
+            abort('404', 'Please setup your payment items first');
         }
 
         $user = $userContract->getOneByToken($request->userToken);
 
         if($user == null){
-            abort('404');
+            abort('404', 'Please setup your payment items first');
         }
 
         #Get Payment Item
