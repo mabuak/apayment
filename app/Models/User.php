@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     User.php
- * @LastModified 7/18/18 1:37 PM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -26,7 +26,8 @@ class User extends EloquentUser
         'last_name',
         'permissions',
         'active',
-        'username'
+        'username',
+        'token'
     ];
 
 	/**

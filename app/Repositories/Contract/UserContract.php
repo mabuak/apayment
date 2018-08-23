@@ -2,8 +2,8 @@
 /**
  * Created By DhanPris
  *
- * @Filename     RoleRepositoryContract.php
- * @LastModified 7/24/18 10:49 AM.
+ * @Filename     UserContract.php
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -21,4 +21,6 @@ interface UserContract
     public function update($id, array $data);
 
     public function datatableWith($select, array $with);
+
+    public function getOneWhere($column, $value, $with = []);
 }

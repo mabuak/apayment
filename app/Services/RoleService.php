@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     RoleService.php
- * @LastModified 7/24/18 3:49 PM.
+ * @LastModified 8/6/18 4:53 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -16,7 +16,7 @@ use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 
-class RoleServiceService implements RoleContract
+class RoleService implements RoleContract
 {
 
     protected $roleRepositoryContract;

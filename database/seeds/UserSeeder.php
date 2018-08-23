@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     UserSeeder.php
- * @LastModified 7/4/18 11:03 PM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -23,10 +23,11 @@ class UserSeeder extends Seeder
 
         #Create User
         $credentials = [
-            'email'   => 'admin@admin.com',
+            'email'      => 'admin@admin.com',
             'password'   => 'password',
             'first_name' => 'Rama',
             'last_name'  => 'Dhan',
+            'token'      => md5(now()),
         ];
 
         $userDb = Sentinel::registerAndActivate($credentials);
@@ -34,19 +35,23 @@ class UserSeeder extends Seeder
         #Create Role
         Sentinel::getRoleRepository()
             ->createModel()
-            ->create([
-                'name' => 'Root',
-                'slug' => 'root'
-            ])
+            ->create(
+                [
+                    'name' => 'Root',
+                    'slug' => 'root',
+                ]
+            )
             ->users()
             ->attach($userDb);
 
         Sentinel::getRoleRepository()
             ->createModel()
-            ->create([
-                'name'        => 'User',
-                'slug'        => 'user',
-                'permissions' => ['dashboard' => true]
-            ])->users();
+            ->create(
+                [
+                    'name'        => 'User',
+                    'slug'        => 'user',
+                    'permissions' => ['dashboard' => true],
+                ]
+            )->users();
     }
 }

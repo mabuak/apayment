@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     global.php
- * @LastModified 7/12/18 5:02 PM.
+ * @LastModified 8/7/18 11:48 AM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -16,6 +16,7 @@ return [
     'btn_delete'            => 'Delete',
     'btn_show'              => 'Show',
     'bulk_actions'          => 'Bulk Actions',
+    'btn_add_new'           => 'Add New',
     'yes'                   => 'Yes',
     'no'                    => 'No',
     'close'                 => 'Close',
@@ -36,4 +37,6 @@ return [
     'not_found'             => 'Not Found',
     'empty_record'          => 'No matching records found',
     'important'             => 'Important',
+    'delete_confirmation'   => 'Are you sure you want to delete \':name\'?',
+
 ];

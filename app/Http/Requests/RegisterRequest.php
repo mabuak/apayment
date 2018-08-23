@@ -2,8 +2,8 @@
 /**
  * Created By DhanPris
  *
- * @Filename     registerRequest.php
- * @LastModified 7/18/18 1:37 PM.
+ * @Filename     RegisterRequest.php
+ * @LastModified 8/6/18 4:29 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -12,7 +12,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class registerRequest extends FormRequest {
+class RegisterRequest extends FormRequest {
 
 	/**
 	 * Determine if the user is authorized to make this request.

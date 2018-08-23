@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     BaseRepository.php
- * @LastModified 7/24/18 10:24 AM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -18,6 +18,22 @@ abstract Class BaseRepository implements BaseContract
      * @var
      */
     protected $model;
+
+    /**
+     * @return mixed
+     */
+    public function getModel()
+    {
+        return $this->model;
+    }
+
+    /**
+     * @param mixed $model
+     */
+    public function setModel($model)
+    {
+        $this->model = $model;
+    }
 
     /**
      * @return mixed
@@ -101,6 +117,18 @@ abstract Class BaseRepository implements BaseContract
     public function update($id, array $data)
     {
         return $this->model->whereIn('id', (array)$id)->update($data);
+    }
+
+    /**
+     * @param $model
+     *
+     * @return mixed
+     */
+    public function save($model)
+    {
+        $model->save();
+
+        return $model;
     }
 
     /**

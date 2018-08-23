@@ -1,9 +1,17 @@
 <?php
+/**
+ * Created By DhanPris
+ *
+ * @Filename     AppServiceProvider.php
+ * @LastModified 8/7/18 4:09 PM.
+ *
+ * Copyright (c) 2018. All rights reserved.
+ */
 
 namespace App\Providers;
 
-use App\Services\Contracts\{AuthContract, RoleContract, UserContract};
-use App\Services\{AuthService, RoleServiceService, UserService};
+use App\Services\Contracts\{AuthContract, InvoiceContract, PaymentItemContract, PaypalContract, RoleContract, UserContract};
+use App\Services\{AuthService, InvoiceService, PaymentItemService, PaypalService, RoleService, UserService};
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
@@ -38,7 +46,22 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->bind(
             RoleContract::class,
-            RoleServiceService::class
+            RoleService::class
+        );
+
+        $this->app->bind(
+            PaymentItemContract::class,
+            PaymentItemService::class
+        );
+
+        $this->app->bind(
+            PaypalContract::class,
+            PaypalService::class
+        );
+
+        $this->app->bind(
+            InvoiceContract::class,
+            InvoiceService::class
         );
     }
 }

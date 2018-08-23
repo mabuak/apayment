@@ -1,0 +1,1 @@
+<a href="{{$route}}" class="btn btn-flat {{$color}} btn-sm">{{$lang}}</a>

@@ -3,7 +3,7 @@
  * Created By DhanPris
  *
  * @Filename     UserService.php
- * @LastModified 7/24/18 10:47 AM.
+ * @LastModified 8/7/18 4:09 PM.
  *
  * Copyright (c) 2018. All rights reserved.
  */
@@ -103,6 +103,7 @@ class UserService implements UserContract
             'last_name'  => $request->last_name,
             'email'      => strtolower($request->email),
             'password'   => $request->password,
+            'token'      => md5(now()),
         ];
     }
 
@@ -153,7 +154,7 @@ class UserService implements UserContract
                 $oldRole = Sentinel::findRoleById($user->roles[0]->id ?? null);
 
                 #Prepare Data
-                $data = array_except($this->makeList($request), ['email', 'password']);
+                $data = array_except($this->makeList($request), ['email', 'password', 'token']);
 
                 #If User Input Password
                 if ($request->password) {
@@ -197,6 +198,17 @@ class UserService implements UserContract
         }
 
         return $this->userRepositoryContract->delete($id);
+    }
+
+    /**
+     * Get User By Token
+     *
+     * @param $token
+     *
+     * @return mixed
+     */
+    public function getOneByToken($token){
+        return $this->userRepositoryContract->getOneWhere('token',  $token);
     }
 }
 
